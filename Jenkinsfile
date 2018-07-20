@@ -7,9 +7,16 @@ pipeline {
 
   }
   stages {
-    stage('Build') {
+    stage('BinariesDownload') {
+      agent any
       steps {
-        sh 'echo "Hello world!"'
+        ansiColor(colorMapName: 'xterm') {
+          sh '''echo #download Java
+echo #download weblogic
+wcho #download weblogic patches
+'''
+        }
+
       }
     }
   }
